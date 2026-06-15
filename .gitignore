@@ -1,0 +1,20 @@
+# Defensive — these names match Hermes per-machine state under ~/.hermes/.
+# If this repo is ever accidentally copied/synced into ~/.hermes/, this
+# prevents committing runtime state back here.
+
+# Hermes runtime / curator state
+.usage.json
+.curator_state
+.bundled_manifest
+.archive/
+.curator_backups/
+auth.json
+auth.lock
+config.yaml
+cache/
+audio_cache/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

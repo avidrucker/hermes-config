@@ -1,0 +1,18 @@
+# gitleaks config for hermes-config.
+#
+# Extends gitleaks' default rule set + allowlists the RFC-2606 example-domain
+# addresses that appear in skill documentation as teaching content (not real).
+# Mirrors the equivalent config in claude-config.
+
+title = "hermes-config gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Known-safe matches in skill documentation."
+
+regexes = [
+    # RFC 2606 reserved example domain — teaching examples, not real addresses.
+    '''[a-zA-Z0-9._%+-]+@example\.(com|org|net)''',
+]
